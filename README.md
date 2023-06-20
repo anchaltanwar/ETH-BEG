@@ -95,7 +95,7 @@ function burn(address _address, uint _value) public {
 
 ## Author
 Anchal Tanwar
-[@anchaltanwar]
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
