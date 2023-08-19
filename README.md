@@ -1,100 +1,49 @@
 # ETH PROOF Beginners Assessment
 It's a solidity program for implementing basic concepts of solidity with the help of tokens and conditional statements.
 
-## Description
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a single function that returns the string. This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
+Sure, here's an example of a README file for the Solidity smart contract code you provided:
+
+---
+
+# Error Handling Smart Contract
+
+This Solidity smart contract demonstrates various error handling mechanisms using the `require`, `revert`, and `assert` statements. The contract allows for checking balances, performing transactions, and calculating quotients while ensuring data integrity and preventing unexpected behavior.
 
 ## Getting Started
 
-### Executing program
+Follow these steps to deploy and interact with the error handling smart contract:
 
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+1. **Prerequisites**: Make sure you have the required development environment set up, including the Solidity compiler.
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., file.sol). Copy and paste the following code into the file:
-```javascript
-pragma solidity 0.8.18;
-contract MyToken {
+2. **Deployment**: Deploy the contract to your preferred Ethereum development environment or network.
 
-    // public variables here
-   string public tokenName = "META";
-   string public tokenAbbrv = "MTA";
-   uint public totalSupply = 0;
+3. **Interacting with the Contract**:
+   - Use the provided functions to test different error handling scenarios:
+     - `check(uint balance, uint coins)`: Increments `amount` and checks if `balance` is greater than or equal to 10 using the `require` statement.
+     - `RevertCheck(uint balance, uint coins)`: Increments `amount` and checks if `balance` is less than 10 using an `if` condition and the `revert` statement.
+     - `AssertCheck(uint i, uint j)`: Uses the `assert` statement to validate that `j` is not equal to 0, then calculates the quotient of `i` divided by `j`.
 
-    // mapping variable here
-    mapping(address => uint ) public balances; 
+## Functions
 
-    // mint function
-   function mint (address _address, uint _value) public{
-      totalSupply += _value;
-      balances[_address] += _value;
-   }
+### `check(uint balance, uint coins)`
 
-    // burn function
-   function burn(address _address, uint _value) public {
-      if(balances[_address] >= _value){
-         totalSupply -= _value;
-         balances[_address] -= _value;
-      }
-   }
+Increments the `amount` by adding the value of `coins`. Checks if the `balance` is greater than or equal to 10 using the `require` statement. If the condition is not met, the transaction reverts with a custom error message.
 
-}
-```
+### `RevertCheck(uint balance, uint coins)`
 
+Increments the `amount` by adding the value of `coins`. Checks if the `balance` is less than 10 using an `if` condition. If the condition is true, the transaction reverts with a custom error message using the `revert` statement.
 
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile HelloWorld.sol" button.
+### `AssertCheck(uint i, uint j)`
 
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "HelloWorld" contract from the dropdown menu, and then click on the "Deploy" button.
+Uses the `assert` statement to validate that `j` is not equal to 0. If the assertion fails, the transaction reverts. Calculates the quotient of `i` divided by `j` and stores it in the `quotient` variable.
 
-Once the contract is deployed, you can interact with it by calling the sayHello function. Click on the "MyToken" contract in the left-hand sidebar, and then click on the "burn" function to pass the address and give some value. Finally, click on the "transact" button to execute the function and retrieve the tokenAbbreviation, tokenName, and totalSupply.
+## License
 
- Similarly, do some changes with "mint" and "balance" and observe the changes in the value of "totalSupply".
- 
- ### Framework Used
-Solidity 0.8.18
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+---
 
-### MyToken
-It is a contract that will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
-```javascript
-contract MyToken {
-
-    // public variables here
-   string public tokenName = "META";
-   string public tokenAbbrv = "MTA";
-   uint public totalSupply = 0; )
-```
-
-### mapping
-It is a variable for mapping addresses to balances (address => uint)
-```javascript
-mapping(address => uint ) public balances;
-```
-
-### mint
-It's a function that takes two parameters: an address and a value. 
-The function then increases the total supply by that number and improves the balance of the “sender” address by that amount
-```javascript
-function mint (address _address, uint _value) public{
-      totalSupply += _value;
-      balances[_address] += _value;
-}
-```
-
-### burn
-It's a function that works the opposite of the mint function, it will work on condition to make sure the balance of "sender" is greater than or equal 
-       to the amount that is supposed to be burned.
-It will take an address and value just like the mint functions. It will then deduct the value from the total supply and from the balance of the “sender”.
-```javascript
-function burn(address _address, uint _value) public {
-      if(balances[_address] >= _value){
-         totalSupply -= _value;
-         balances[_address] -= _value;
-      }
-   }
-```
-
-## Author
-Anchal Tanwar
+Feel free to customize this README file to match your preferences and include additional information if needed. Make sure to include any relevant deployment instructions, additional context, or explanations for potential users of your smart contract.
 
 
 ## License
