@@ -31,7 +31,29 @@ Increments the `amount` by adding the value of `coins`. Checks if the `balance` 
 Uses the `assert` statement to validate that `j` is not equal to 0. If the assertion fails, the transaction reverts. Calculates the quotient of `i` divided by `j` and stores it in the `quotient` variable.
 
 ## Author
-@Anchal Tanwar
+@AnchalTanwar
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
