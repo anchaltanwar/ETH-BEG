@@ -1,10 +1,3 @@
-# ETH PROOF Beginners Assessment
-It's a solidity program for implementing basic concepts of solidity with the help of tokens and conditional statements.
-
-Sure, here's an example of a README file for the Solidity smart contract code you provided:
-
----
-
 # Error Handling Smart Contract
 
 This Solidity smart contract demonstrates various error handling mechanisms using the `require`, `revert`, and `assert` statements. The contract allows for checking balances, performing transactions, and calculating quotients while ensuring data integrity and preventing unexpected behavior.
@@ -36,14 +29,6 @@ Increments the `amount` by adding the value of `coins`. Checks if the `balance` 
 ### `AssertCheck(uint i, uint j)`
 
 Uses the `assert` statement to validate that `j` is not equal to 0. If the assertion fails, the transaction reverts. Calculates the quotient of `i` divided by `j` and stores it in the `quotient` variable.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize this README file to match your preferences and include additional information if needed. Make sure to include any relevant deployment instructions, additional context, or explanations for potential users of your smart contract.
 
 
 ## License
